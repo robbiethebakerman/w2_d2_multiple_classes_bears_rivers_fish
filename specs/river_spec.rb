@@ -7,7 +7,7 @@ class RiverTest < MiniTest::Test
 
   def setup
     @river_clyde = River.new("Clyde")
-    @fish1 = Fish.new("Alex Salmon")
+    @fish_alex = Fish.new("Alex Salmon")
   end
 
   def test_get_river_name
@@ -15,14 +15,14 @@ class RiverTest < MiniTest::Test
   end
 
   def test_add_fish
-    @river_clyde.add_fish(@fish1)
+    @river_clyde.add_fish(@fish_alex)
     fish_count = @river_clyde.fishies.count
     assert_equal(1, fish_count)
   end
 
   def test_remove_fish
-    @river_clyde.add_fish(@fish1)
-    @river_clyde.remove_fish(@fish1)
+    @river_clyde.add_fish(@fish_alex)
+    @river_clyde.remove_fish(@fish_alex)
     fish_count = @river_clyde.fishies.count
     assert_equal(0, fish_count)
   end
