@@ -17,4 +17,12 @@ class Bear
     self.add_fish(fish)
   end
 
+  def roar
+    return "Roar!!!"
+  end
+
+  def how_full()
+    return @stomach.length()
+  end
+
 end

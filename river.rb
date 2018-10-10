@@ -15,4 +15,8 @@ class River
     @fishies.delete(fish)
   end
 
+  def count_fish()
+    return @fishies.length()
+  end
+
 end

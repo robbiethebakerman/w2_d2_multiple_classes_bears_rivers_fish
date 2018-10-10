@@ -37,4 +37,13 @@ class BearTest < MiniTest::Test
     assert_equal(1, bear_fish_count)
   end
 
+  def test_bear_roar
+    result = @bear_yogi.roar()
+    assert_equal("Roar!!!", result)
+  end
+
+  def test_how_full
+    assert_equal(0, @bear_yogi.how_full)
+  end
+
 end
